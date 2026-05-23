@@ -8,7 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mesto</title>
-    <script type="module" crossorigin src="./assets/index-Gbuh5j-I.js"></script>
+    <script type="module" crossorigin src="./assets/index-CIXBsZUF.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-D2z4Cjqv.css">
   </head>
   <body class="page">
@@ -52,7 +52,13 @@
                 id="user-name"
                 class="popup__input popup__input_type_name"
                 placeholder="Имя"
+                required
+                minlength="2"
+                maxlength="40"
+                pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
+                data-error-message="Разрешены только буквы, дефис и пробелы"
               />
+              <span class="user-name-error popup__error"></span>
             </label>
             <label class="popup__label">
               <input
@@ -61,7 +67,11 @@
                 id="user-description"
                 class="popup__input popup__input_type_description"
                 placeholder="Занятие"
+                required
+                minlength="2"
+                maxlength="200"
               />
+            <span class="user-description-error popup__error"></span>
             </label>
             <button
               type="submit"
@@ -85,7 +95,13 @@
                 id="place-name"
                 class="popup__input popup__input_type_card-name"
                 placeholder="Название"
+                required
+                minlength="2"
+                maxlength="40"
+                pattern="^[A-Za-zА-Яа-яЁё\s\-]+$"
+                data-error-message="Разрешены только буквы, дефис и пробелы"
               />
+              <span class="place-name-error popup__error"></span>
             </label>
             <label class="popup__label">
               <input
@@ -94,7 +110,9 @@
                 id="place-link"
                 class="popup__input popup__input_type_url"
                 placeholder="Ссылка на картинку"
+                required
               />
+              <span class="place-link-error popup__error"></span>
             </label>
             <button
               type="submit"
@@ -141,7 +159,9 @@
                 id="user-avatar"
                 class="popup__input popup__input_type_avatar"
                 placeholder="Ссылка на изображение"
+                required
               />
+              <span class="user-avatar-error popup__error"></span>
             </label>
             <button
               type="submit"
